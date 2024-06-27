@@ -1,22 +1,21 @@
 pipeline {
-  agent any
-  stages{
-    stage('First Stage'){
-      steps{
-        sh 'echo hello-world'
-      }
-    }
-    stage('Second Stage'){
-      steps{
-        sh 'echo hello-world2'
-      }
-    }
+    agent any
 
-    stage('Third Stage'){
-      steps{
-        sh 'echo hello-world3'
-      }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
-
-  }
 }
