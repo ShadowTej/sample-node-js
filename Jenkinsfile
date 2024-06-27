@@ -3,18 +3,18 @@ pipeline {
   stages{
     stage('First Stage'){
       steps{
-        sh 'echo hello-world'
+        sh 'echo print ls'
       }
     }
     stage('Second Stage'){
       steps{
-        sh 'echo hello-world2'
+        sh 'echo create touch M'
       }
     }
 
     stage('Third Stage'){
       steps{
-        sh 'echo hello-world3'
+        sh 'sort M'
       }
     }
 
